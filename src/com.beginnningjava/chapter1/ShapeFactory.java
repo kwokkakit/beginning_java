@@ -22,7 +22,7 @@ public class ShapeFactory {
     public static Shape getShape(int type) {
         try {
             String className = shapes.get(new Integer(type));
-            return (Shape) Class.forName(className).newInstance();
+            return (Shape) Class.forName("com.beginnningjava.chapter1." + className).newInstance();
         } catch (Exception e) {
             return null;
         }
